@@ -1,3 +1,30 @@
+var dataproject = {
+    init: function() {},
+    share: function() {
+        $(".icon-twitter").on("click", function() {
+            var tweet = "";
+            var url = "";
+            var twitter_url = "https://twitter.com/intent/tweet?text=" + tweet + "&url=" + url + "&tw_p=tweetbutton";
+            window.open(twitter_url, "mywin", "left=200,top=200,width=500,height=300,toolbar=1,resizable=0");
+            return false;
+        });
+        $(".icon-facebook").on("click", function() {
+            var picture = "";
+            var title = "";
+            var description = "";
+            var url = "";
+            var facebook_url = "https://www.facebook.com/dialog/feed?display=popup&app_id=310302989040998&link=" + url + "&picture=" + picture + "&name=" + title + "&description=" + description + "&redirect_uri=http://www.facebook.com";
+            window.open(facebook_url, "mywin", "left=200,top=200,width=500,height=300,toolbar=1,resizable=0");
+            return false;
+        });
+    }
+};
+
+$(document).ready(function() {
+    dataproject.init();
+    console.log("connected");
+});
+
 !function(a, b) {
     "use strict";
     "object" == typeof module && "object" == typeof module.exports ? module.exports = a.document ? b(a, !0) : function(a) {
@@ -161,7 +188,7 @@
         }, C = {}.hasOwnProperty, D = [], E = D.pop, F = D.push, G = D.push, H = D.slice, I = function(a, b) {
             for (var c = 0, d = a.length; d > c; c++) if (a[c] === b) return c;
             return -1;
-        }, J = "checked|selected|async|autofocus|autoplay|controls|defer|disabled|hidden|ismap|loop|multiple|open|readonly|required|scoped", K = "[\\x20\\t\\r\\n\\f]", L = "(?:\\\\.|[\\w-]|[^\x00-\\xa0])+", M = "\\[" + K + "*(" + L + ")(?:" + K + "*([*^$|!~]?=)" + K + "*(?:'((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\"|(" + L + "))|)" + K + "*\\]", N = ":(" + L + ")(?:\\((('((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\")|((?:\\\\.|[^\\\\()[\\]]|" + M + ")*)|.*)\\)|)", O = new RegExp(K + "+", "g"), P = new RegExp("^" + K + "+|((?:^|[^\\\\])(?:\\\\.)*)" + K + "+$", "g"), Q = new RegExp("^" + K + "*," + K + "*"), R = new RegExp("^" + K + "*([>+~]|" + K + ")" + K + "*"), S = new RegExp("=" + K + "*([^\\]'\"]*?)" + K + "*\\]", "g"), T = new RegExp(N), U = new RegExp("^" + L + "$"), V = {
+        }, J = "checked|selected|async|autofocus|autoplay|controls|defer|disabled|hidden|ismap|loop|multiple|open|readonly|required|scoped", K = "[\\x20\\t\\r\\n\\f]", L = "(?:\\\\.|[\\w-]|[^\0-\\xa0])+", M = "\\[" + K + "*(" + L + ")(?:" + K + "*([*^$|!~]?=)" + K + "*(?:'((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\"|(" + L + "))|)" + K + "*\\]", N = ":(" + L + ")(?:\\((('((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\")|((?:\\\\.|[^\\\\()[\\]]|" + M + ")*)|.*)\\)|)", O = new RegExp(K + "+", "g"), P = new RegExp("^" + K + "+|((?:^|[^\\\\])(?:\\\\.)*)" + K + "+$", "g"), Q = new RegExp("^" + K + "*," + K + "*"), R = new RegExp("^" + K + "*([>+~]|" + K + ")" + K + "*"), S = new RegExp("=" + K + "*([^\\]'\"]*?)" + K + "*\\]", "g"), T = new RegExp(N), U = new RegExp("^" + L + "$"), V = {
             ID: new RegExp("^#(" + L + ")"),
             CLASS: new RegExp("^\\.(" + L + ")"),
             TAG: new RegExp("^(" + L + "|[*])"),
@@ -174,7 +201,7 @@
             var d = "0x" + b - 65536;
             return d !== d || c ? b : 0 > d ? String.fromCharCode(d + 65536) : String.fromCharCode(d >> 10 | 55296, 1023 & d | 56320);
         }, ba = /([\0-\x1f\x7f]|^-?\d)|^-$|[^\x80-\uFFFF\w-]/g, ca = function(a, b) {
-            return b ? "\x00" === a ? "�" : a.slice(0, -1) + "\\" + a.charCodeAt(a.length - 1).toString(16) + " " : "\\" + a;
+            return b ? "\0" === a ? "�" : a.slice(0, -1) + "\\" + a.charCodeAt(a.length - 1).toString(16) + " " : "\\" + a;
         }, da = function() {
             m();
         }, ea = ta(function(a) {
@@ -520,8 +547,10 @@
                     return U.test(a || "") || ga.error("unsupported lang: " + a), a = a.replace(_, aa).toLowerCase(), 
                     function(b) {
                         var c;
-                        do if (c = p ? b.lang : b.getAttribute("xml:lang") || b.getAttribute("lang")) return c = c.toLowerCase(), 
-                        c === a || 0 === c.indexOf(a + "-"); while ((b = b.parentNode) && 1 === b.nodeType);
+                        do {
+                            if (c = p ? b.lang : b.getAttribute("xml:lang") || b.getAttribute("lang")) return c = c.toLowerCase(), 
+                            c === a || 0 === c.indexOf(a + "-");
+                        } while ((b = b.parentNode) && 1 === b.nodeType);
                         return !1;
                     };
                 }),
@@ -1000,7 +1029,7 @@
                 always: function() {
                     return f.done(arguments).fail(arguments), this;
                 },
-                "catch": function(a) {
+                catch: function(a) {
                     return e.then(null, a);
                 },
                 pipe: function() {
@@ -1264,7 +1293,9 @@
         }, i = h(), j = c && c[3] || (r.cssNumber[b] ? "" : "px"), k = (r.cssNumber[b] || "px" !== j && +i) && _.exec(r.css(a, b));
         if (k && k[3] !== j) {
             j = j || k[3], c = c || [], k = +i || 1;
-            do f = f || ".5", k /= f, r.style(a, b, k + j); while (f !== (f = h() / i) && 1 !== f && --g);
+            do {
+                f = f || ".5", k /= f, r.style(a, b, k + j);
+            } while (f !== (f = h() / i) && 1 !== f && --g);
         }
         return c && (k = +k || +i || 0, e = c[1] ? k + (c[1] + 1) * c[2] : +c[2], d && (d.unit = j, 
         d.start = k, d.end = e)), e;
@@ -1526,7 +1557,7 @@
         pageY: !0,
         shiftKey: !0,
         view: !0,
-        "char": !0,
+        char: !0,
         charCode: !0,
         key: !0,
         keyCode: !0,
@@ -1838,7 +1869,7 @@
             zoom: !0
         },
         cssProps: {
-            "float": "cssFloat"
+            float: "cssFloat"
         },
         style: function(a, b, c, d) {
             if (a && 3 !== a.nodeType && 8 !== a.nodeType && a.style) {
@@ -2224,8 +2255,8 @@
             }
         },
         propFix: {
-            "for": "htmlFor",
-            "class": "className"
+            for: "htmlFor",
+            class: "className"
         }
     }), o.optSelected || (r.propHooks.selected = {
         get: function(a) {
@@ -2681,7 +2712,7 @@
             cache: !0,
             async: !1,
             global: !1,
-            "throws": !0
+            throws: !0
         });
     }, r.fn.extend({
         wrapAll: function(a) {
@@ -2947,31 +2978,4 @@
     return r.noConflict = function(b) {
         return a.$ === r && (a.$ = Ub), b && a.jQuery === r && (a.jQuery = Tb), r;
     }, b || (a.jQuery = a.$ = r), r;
-});
-
-var dataproject = {
-    init: function() {},
-    share: function() {
-        $(".icon-twitter").on("click", function() {
-            var tweet = "";
-            var url = "";
-            var twitter_url = "https://twitter.com/intent/tweet?text=" + tweet + "&url=" + url + "&tw_p=tweetbutton";
-            window.open(twitter_url, "mywin", "left=200,top=200,width=500,height=300,toolbar=1,resizable=0");
-            return false;
-        });
-        $(".icon-facebook").on("click", function() {
-            var picture = "";
-            var title = "";
-            var description = "";
-            var url = "";
-            var facebook_url = "https://www.facebook.com/dialog/feed?display=popup&app_id=310302989040998&link=" + url + "&picture=" + picture + "&name=" + title + "&description=" + description + "&redirect_uri=http://www.facebook.com";
-            window.open(facebook_url, "mywin", "left=200,top=200,width=500,height=300,toolbar=1,resizable=0");
-            return false;
-        });
-    }
-};
-
-$(document).ready(function() {
-    dataproject.init();
-    console.log("connected");
 });
