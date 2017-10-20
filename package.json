@@ -6,7 +6,7 @@
   "scripts": {
     "pug": "pug  -P -p src/index.pug < src/index.pug > dist/index.html",
     "scss": "node-sass -o dist/css src/scss",
-    "uglify": "mkdir -p dist/js && uglifyjs src/js/*.js -b -o dist/js/app.js && uglifyjs src/js/*.js -m -c -o dist/js/app.min.js",
+    "uglify": "mkdir -p dist/js && uglifyjs src/js/*.js -b -o dist/js/app.js && uglifyjs src/js/*.js -m -c -o dist/js/min/app.min.js",
     "imagemin": "imagemin src/images/* --out-dir=dist/images/",
     "serve": "browser-sync start --server dist 'dist/css/*.css, dist/js/*.js'",
     "reload": "browser-sync reload --files='dist/*'",
