@@ -22,7 +22,7 @@
     "watch:all": "parallelshell 'npm run serve' 'npm run watch:html' 'npm run watch:css' 'npm run watch:js' 'npm run watch:server'",
     "pugmin": "pug -p src/index.pug < src/index.pug > dist/index.html",
     "scssmin": "node-sass --output-style compressed -o dist/css src/scss",
-    "jsmin": "uglifyjs dist/js/app.js -m -c -o dist/js/app.min.js",
+    "jsmin": "uglifyjs dist/js/app.js -m -c -o dist/js/min/app.min.js",
     "build:min": "npm run pugmin && npm run scssmin && npm run jsmin"
   },
   "repository": {
