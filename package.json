@@ -1,7 +1,7 @@
 {
-  "name": "PROJ-NAME-HERE",
+  "name": "violent-crime-2017",
   "version": "1.0.0",
-  "description": "PROJ-NAME-HERE",
+  "description": "violent-crime-2017",
   "main": "index.js",
   "scripts": {
     "pug": "pug  -P -p src/index.pug < src/index.pug > dist/index.html",
@@ -27,15 +27,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/USERNAME/PROJ-NAME-HERE.git"
+    "url": "git+https://github.com/baltimore-sun-data/violent-crime-2017.git"
   },
   "keywords": ["baltimore sun"],
   "author": "",
   "license": "",
   "bugs": {
-    "url": "https://github.com/USERNAME/PROJ-NAME-HERE/issues"
+    "url": "https://github.com/baltimore-sun-data/violent-crime-2017/issues"
   },
-  "homepage": "https://github.com/USERNAME/PROJ-NAME-HERE#readme",
+  "homepage": "https://github.com/baltimore-sun-data/violent-crime-2017#readme",
   "devDependencies": {
   }
 }
