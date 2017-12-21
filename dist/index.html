@@ -13,7 +13,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Old+Standard+TT|Lato|Montserrat|Droid+Serif">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Old+Standard+TT|Lato|Montserrat|Droid+Serif|Noto+Serif|Inconsolata">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <!--Facebook Stuff-->
@@ -34,7 +34,7 @@
   </head>
   <body><script>
 	((((window.trb || (window.trb = {})).data || (trb.data = {})).metrics || (trb.data.metrics = {})).thirdparty = {
-		pageName: 'bs:dataproject:news:maryland:---:dataproject.',
+		pageName: 'bs:dataproject:news:maryland:violent-crime-2017:dataproject.',
 		channel: 'news:maryland',
 		server: 'data.baltimoresun.com',
 		hier1: 'baltimoresun:news:maryland',
@@ -48,17 +48,180 @@
 		eVar34: 'D=ch',
 		eVar35: 'D=pageName',
 		events:''
-	});  
+	});
 </script>
 
 <script src="http://www.baltimoresun.com/thirdpartyservice?disablenav=false&disablessor=true" async></script>
 <div data-trb-thirdpartynav></div>
     <div class="container">
-      <h1>H1 / MONTSERRAT</h1>
-      <p>P / LATO Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec eros ac risus condimentum pretium. In faucibus quis risus sit amet ornare.</p><a href="" target="_blank">A / LATO / GOLDENROD</a>
+      <section>
+        <div class="width--normal text">
+          <h1>Violent crime in Baltimore, 2012 - 2017</h1>
+          <p>Violent crime in Baltimore spiked after 2015. That year, homicides jumped 62 percent to 344, a figure unseen since the ‘90s. Carjackings, shootings, and commercial robberies all skyrocketed as overall violent crime rose 7.6 percent.</p>
+          <p>Three years since that pivotal year, overall violent crime continues to climb in the city. Below, we look at how violent crime has changed in two distinct time periods — the three years before 2015 and the three years since.</p>
+        </div>
+        <div class="width--normal media media--chart">
+          <h3>Violent Crimes Totals, 2012 - 2017</h3>
+          <canvas id="overall"></canvas>
+        </div>
+        <div class="width--float media media--crimeDefs">
+          <div class="wrapper">
+            <h3>Types of violent crime</h3>
+            <ul>
+              <li>
+                <p class="crimeType">Aggravated Assault</p>
+                <p class="definition">An assault with any kind of weapon</p>
+              </li>
+              <li>
+                <p class="crimeType">Common Assault</p>
+                <p class="definition">When someone uses their hands to assault you, such as a punch in the face</p>
+              </li>
+              <li>
+                <p class="crimeType">Homicide</p>
+                <p class="definition">Killing of another person</p>
+              </li>
+              <li>
+                <p class="crimeType">Rape</p>
+                <p class="definition">Unlawful sexual activity or intercourse carried out against the will of the other person or with someone who is incapable of valid consent</p>
+              </li>
+              <li>
+                <p class="crimeType">Robbery</p>
+                <p class="definition">The use of violence or threat of violence to steal</p>
+              </li>
+              <li>
+                <p class="crimeType">Shooting</p>
+                <p class="definition">Unlawful shooting of another person</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="width--normal text">
+          <p>These three year segments, from <span>2012 to 2014 </span>and <span>2015 to 2017</span>, were chosen to highlight a turning point in recent city history.</p>
+          <p>From 2012 to 2014, the city saw steadily declining numbers in violent crime. Since then, in the past three years, numbers have increased. As the third year closes with this continuing trend, the city appears to have entered a new norm of increased violent crime.</p>
+          <p>Overall violent crime between these two time periods is up 9.5 percent. Most categories of violent crime either increased or stayed about the same, with the biggest percentage growths in homicides, shootings and robberies.</p>
+        </div>
+        <div class="width--normal media media--chart">
+          <h3>Violent Crimes by Type, 2012 - 2014, 2015 - 2017</h3>
+          <canvas id="bytype"></canvas>
+        </div>
+      </section>
+      <section>
+        <div class="width--normal text">
+          <h2>Homicides and Shootings</h2>
+          <p>The 344 homicides that made 2015 such a deadly year may well be the new norm in the city as a third year closes with over 300 homicides.</p>
+          <p>Though homicides and shootings only make up a small percentage of overall violent crime, they saw the highest percentage jumps from 2015 to 2017.</p>
+        </div>
+        <div class="width--normal media media--chart">
+          <h3>Homicides and shootings, 2012 - 2017</h3>
+          <canvas id="homicides"></canvas>
+        </div>
+        <div class="width--float media media--homicideTable">
+          <div class="wrapper">
+            <h3>Areas with most shootings and homicides</h3>
+            <table>
+              <tr>
+                <th> </th>
+                <th>2012 - 2014</th>
+                <th>2015 - 2017</th>
+                <th>% change</th>
+              </tr>
+              <tr>
+                <td>Sandtown-Winchester</td>
+                <td>47</td>
+                <td>121</td>
+                <td>157%</td>
+              </tr>
+              <tr>
+                <td>Brooklyn</td>
+                <td>32</td>
+                <td>104</td>
+                <td>225%</td>
+              </tr>
+              <tr>
+                <td>Central Park Heights</td>
+                <td>41</td>
+                <td>73</td>
+                <td>78%</td>
+              </tr>
+              <tr>
+                <td>East Baltimore Midway</td>
+                <td>25</td>
+                <td>69</td>
+                <td>176%</td>
+              </tr>
+              <tr>
+                <td>Broadway East</td>
+                <td>39</td>
+                <td>67</td>
+                <td>72%</td>
+              </tr>
+              <tr>
+                <td>Belair-Edison</td>
+                <td>47</td>
+                <td>66</td>
+                <td>40%</td>
+              </tr>
+              <tr>
+                <td>Upton</td>
+                <td>38</td>
+                <td>60</td>
+                <td>58%</td>
+              </tr>
+              <tr>
+                <td>Coldstream Homestead Montebello</td>
+                <td>34</td>
+                <td>59</td>
+                <td>74%</td>
+              </tr>
+              <tr>
+                <td>Carrollton Ridge</td>
+                <td>25</td>
+                <td>58</td>
+                <td>132%</td>
+              </tr>
+              <tr>
+                <td>Mondawmin</td>
+                <td>28</td>
+                <td>57</td>
+                <td>104%</td>
+              </tr>
+              <tr>
+                <td>Frankford</td>
+                <td>34</td>
+                <td>52</td>
+                <td>53%</td>
+              </tr>
+              <tr>
+                <td>Harlem Park</td>
+                <td>18</td>
+                <td>48</td>
+                <td>167%</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="width--normal text">
+          <p>The neighborhoods with the most shootings and homicides today are largely the same ones from 2012-2014, but many saw massive spikes in numbers.</p>
+          <p>From 2012-2014, Sandtown-Winchester had 47 shootings and homicides, the most of any other neighborhood. Since then, Sandtown-Winchester still remains the deadliest neighborhood at 121 shootings and killings — 2.5 times its previous rate.</p>
+          <p>Moreover, 12 neighborhoods with the most shootings and homicides from 2015 to 2017 outpace the 47 shootings and homicides from Sandtown-Winchester pre-2015.</p>
+        </div>
+        <div class="width--wide media--time">
+          <div class="wrapper">
+            <P>Shootings and killings are also occurring earlier in the day now. From 2012 and 2014, 48 percent of shootings and homicides took place between 9 p.m. and 3 a.m. That figure is down to 40 percent between 2015 and 2017. Shootings and homicides between 9 a.m. and 9 p.m. are up 7 percentage points.</P>
+          </div>
+          <canvas id="time"></canvas>
+        </div>
+      </section>
+      <section>
+        <div class="width--normal text">
+          <h2>Robberies</h2>
+          <p>In raw numbers, robberies make up the bulk of the increase in violent crime in Baltimore. The city saw 3,875 more robberies between 2015 and 2017. Of these, street robberies are the most common.</p>
+        </div>
+      </section>
     </div>
     <!--Javascript-->
     <script src="js/min/jquery-3.0.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>

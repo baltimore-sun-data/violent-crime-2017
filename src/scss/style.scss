@@ -8,15 +8,28 @@
 @import "normalize";
 @import "fonts";
 
+$desert: #cec4bf;
+$bluegray: #a2a9b1;
+$offwhite: #ebedec;
+$darkblue: #495871;
+$darkgray: #3d3d3b;
+
+html, body {
+	overflow-x: hidden;
+}
 body {
 	color: $offblack;
-	font-size: 14px; // body-level font size for "em"-scaled designs
+	font-size: 16px; // body-level font size for "em"-scaled designs
 }
-h1 {
-	font-family: $montserrat;
+h1,h2,h3 {
+	font-family: $inconsolata;
+	text-transform: uppercase;
 }
 p,a {
-	font-family: $lato;
+	font-family: $notoserif;
+	span {
+		font-weight: bold;
+	}
 }
 a {
 	color: $goldenrod;
@@ -25,7 +38,176 @@ a {
 .container {
 	margin-top: 50px; // Pushes below topnav
 }
+section {
+	@media(min-width: 500px) {
+	}
+}
+h1 {
+	font-size: 4em;
+}
+h2 {
+	font-size: 3em;
+}
+h3 {
+	font-size: 1.7em;
+}
+.width {
+	&--normal {
+		width: 100%;
+		margin: 0 auto;
+		padding: 1em;
+		@media(min-width: 720px){
+			max-width: 700px;
+			padding: 1em 0;
+		}
+		@media(min-width: 1020px){
+			max-width: 1000px;
+		}
+	}
+	&--wide {
+		width: 100%;
+		padding: 1em;
+		@media(min-width: 720px){
+			padding: 1em 0;
+		}
+	}
+	&--float {
+		width: 100%;
+		margin: 0 auto;
+		@media(min-width: 720px){
+			max-width: 700px;
+		}
+		@media(min-width: 1020px){
+			max-width: 1000px;
+		}
+	}
+}
+.text {
 
+}
+.media {
+	&--chart {
+		clear: both;
+	}
+	&--crimeDefs {
+		.wrapper {
+			width: 100%;
+			background-color: $desert;
+			padding: 1em;
+			@media(min-width: 720px){
+				max-width: 380px;
+				position: relative;
+				margin: 1em 0 1em 1em;
+				float: right;
+				&:after {
+					position: absolute;
+					content: "";
+					width: 250%;
+					height: 100%;
+					top: 0;
+					@include striped-background(90deg, 1em, $desert, white);
+					z-index: -1;
+				}
+				@media(min-width: 1020px){
+					max-width: 680px;
+				}
+			}
+		}
+		h3 {
+			margin: 0;
+		}
+		ul {
+			padding-left: 0;
+			@media(min-width: 500px){
+				padding-left: 1em;
+			}
+		}
+		li {
+			list-style: none;
+		}
+		p {
+			font-family: $inconsolata;
+			&.crimeType {
+				margin: 0;
+				font-weight: bold;
+			}
+			&.definition {
+				margin-top: .2em;
+				padding-left: 1em;
+			}
+		}
+	}
+	&--homicideTable {
+		.wrapper {
+			position: relative;
+			width: 100%;
+			background-color: $desert;
+			padding: 1em;
+			&:after {
+				position: absolute;
+				content: "";
+				width: 250%;
+				height: 100%;
+				top: 0;
+				left: -250%;
+				@include striped-background(90deg, 1em, white, $desert);
+				z-index: -1;
+			}
+			@media(min-width: 720px){
+				@media(min-width: 1020px){
+					max-width: 680px;
+					margin: 1em 1em 1em 0;
+					float: left;
+				}
+			}
+		}
+		h3 {
+			margin-top: 0;
+		}
+	}
+	&--time {
+		background-color: $darkblue;
+		color: white;
+		.wrapper {
+			width: 100%;
+			@media(min-width: 720px) {
+				max-width: 700px;
+				margin: 0 auto;
+			}
+		}
+		#time {
+			width: 100%;
+			max-width: 500px;
+			margin: 0 auto;
+		}
+	}
+}
+table {
+	width: 100%;
+}
+th, td {
+	padding: .3em .5em;
+	font-family: $inconsolata;
+	&:nth-child(4) {
+		display: none;
+		@media(min-width: 500px) {
+			display: table-cell;
+		}
+	}
+}
+td {
+	&:first-child {
+		font-weight: bold;
+	}
+	&:not(:first-child) {
+		text-align: center;
+	}
+}
+tr {
+	&:nth-child(even) {
+		background-color: lighten($desert,7);
+	}
+}
 
 /* Leaderboard */
 // #leaderboard {

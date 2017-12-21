@@ -461,15 +461,21 @@ th {
 .icon-facebook:before {
   content: "\e615"; }
 
+html, body {
+  overflow-x: hidden; }
+
 body {
   color: #1e1e1e;
-  font-size: 14px; }
+  font-size: 16px; }
 
-h1 {
-  font-family: "Montserrat", sans-serif; }
+h1, h2, h3 {
+  font-family: "Inconsolata", serif;
+  text-transform: uppercase; }
 
 p, a {
-  font-family: "Lato", sans-serif; }
+  font-family: "Noto Serif", serif; }
+  p span, a span {
+    font-weight: bold; }
 
 a {
   color: #daa520;
@@ -477,5 +483,148 @@ a {
 
 .container {
   margin-top: 50px; }
+
+h1 {
+  font-size: 4em; }
+
+h2 {
+  font-size: 3em; }
+
+h3 {
+  font-size: 1.7em; }
+
+.width--normal {
+  width: 100%;
+  margin: 0 auto;
+  padding: 1em; }
+  @media (min-width: 720px) {
+    .width--normal {
+      max-width: 700px;
+      padding: 1em 0; } }
+  @media (min-width: 1020px) {
+    .width--normal {
+      max-width: 1000px; } }
+
+.width--wide {
+  width: 100%;
+  padding: 1em; }
+  @media (min-width: 720px) {
+    .width--wide {
+      padding: 1em 0; } }
+
+.width--float {
+  width: 100%;
+  margin: 0 auto; }
+  @media (min-width: 720px) {
+    .width--float {
+      max-width: 700px; } }
+  @media (min-width: 1020px) {
+    .width--float {
+      max-width: 1000px; } }
+
+.media--chart {
+  clear: both; }
+
+.media--crimeDefs .wrapper {
+  width: 100%;
+  background-color: #cec4bf;
+  padding: 1em; }
+  @media (min-width: 720px) {
+    .media--crimeDefs .wrapper {
+      max-width: 380px;
+      position: relative;
+      margin: 1em 0 1em 1em;
+      float: right; }
+      .media--crimeDefs .wrapper:after {
+        position: absolute;
+        content: "";
+        width: 250%;
+        height: 100%;
+        top: 0;
+        background: repeating-linear-gradient(90deg, #cec4bf, #cec4bf 1em, white 1em, white 2em);
+        z-index: -1; } }
+  @media (min-width: 720px) and (min-width: 1020px) {
+    .media--crimeDefs .wrapper {
+      max-width: 680px; } }
+
+.media--crimeDefs h3 {
+  margin: 0; }
+
+.media--crimeDefs ul {
+  padding-left: 0; }
+  @media (min-width: 500px) {
+    .media--crimeDefs ul {
+      padding-left: 1em; } }
+
+.media--crimeDefs li {
+  list-style: none; }
+
+.media--crimeDefs p {
+  font-family: "Inconsolata", serif; }
+  .media--crimeDefs p.crimeType {
+    margin: 0;
+    font-weight: bold; }
+  .media--crimeDefs p.definition {
+    margin-top: .2em;
+    padding-left: 1em; }
+
+.media--homicideTable .wrapper {
+  position: relative;
+  width: 100%;
+  background-color: #cec4bf;
+  padding: 1em; }
+  .media--homicideTable .wrapper:after {
+    position: absolute;
+    content: "";
+    width: 250%;
+    height: 100%;
+    top: 0;
+    left: -250%;
+    background: repeating-linear-gradient(90deg, white, white 1em, #cec4bf 1em, #cec4bf 2em);
+    z-index: -1; }
+
+@media (min-width: 720px) and (min-width: 1020px) {
+  .media--homicideTable .wrapper {
+    max-width: 680px;
+    margin: 1em 1em 1em 0;
+    float: left; } }
+
+.media--homicideTable h3 {
+  margin-top: 0; }
+
+.media--time {
+  background-color: #495871;
+  color: white; }
+  .media--time .wrapper {
+    width: 100%; }
+    @media (min-width: 720px) {
+      .media--time .wrapper {
+        max-width: 700px;
+        margin: 0 auto; } }
+  .media--time #time {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto; }
+
+table {
+  width: 100%; }
+
+th, td {
+  padding: .3em .5em;
+  font-family: "Inconsolata", serif; }
+  th:nth-child(4), td:nth-child(4) {
+    display: none; }
+    @media (min-width: 500px) {
+      th:nth-child(4), td:nth-child(4) {
+        display: table-cell; } }
+
+td:first-child {
+  font-weight: bold; }
+
+td:not(:first-child) {
+  text-align: center; }
+
+tr:nth-child(even) {
+  background-color: #ddd7d3; }
 
 /* Leaderboard */
