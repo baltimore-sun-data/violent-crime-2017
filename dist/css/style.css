@@ -469,7 +469,7 @@ body {
   font-size: 16px; }
 
 h1, h2, h3 {
-  font-family: "Inconsolata", serif;
+  font-family: "Inconsolata", sans-serif;
   text-transform: uppercase; }
 
 p, a {
@@ -481,9 +481,6 @@ a {
   color: #daa520;
   text-decoration: none; }
 
-.container {
-  margin-top: 50px; }
-
 h1 {
   font-size: 4em; }
 
@@ -492,6 +489,19 @@ h2 {
 
 h3 {
   font-size: 1.7em; }
+
+table {
+  width: 100%; }
+
+th, td {
+  padding: .3em .5em;
+  font-family: "Inconsolata", sans-serif; }
+
+tr:nth-child(even) {
+  background-color: #ddd7d3; }
+
+.container {
+  margin-top: 50px; }
 
 .width--normal {
   width: 100%;
@@ -560,7 +570,7 @@ h3 {
   list-style: none; }
 
 .media--crimeDefs p {
-  font-family: "Inconsolata", serif; }
+  font-family: "Inconsolata", sans-serif; }
   .media--crimeDefs p.crimeType {
     margin: 0;
     font-weight: bold; }
@@ -582,49 +592,54 @@ h3 {
     left: -250%;
     background: repeating-linear-gradient(90deg, white, white 1em, #cec4bf 1em, #cec4bf 2em);
     z-index: -1; }
-
-@media (min-width: 720px) and (min-width: 1020px) {
-  .media--homicideTable .wrapper {
-    max-width: 680px;
-    margin: 1em 1em 1em 0;
-    float: left; } }
+  @media (min-width: 1020px) {
+    .media--homicideTable .wrapper {
+      max-width: 680px;
+      margin: 1em 1em 1em 0;
+      float: left; } }
 
 .media--homicideTable h3 {
   margin-top: 0; }
+
+.media--homicideTable th:nth-child(4), .media--homicideTable td:nth-child(4) {
+  display: none; }
+  @media (min-width: 500px) {
+    .media--homicideTable th:nth-child(4), .media--homicideTable td:nth-child(4) {
+      display: table-cell; } }
+
+.media--homicideTable td:first-child {
+  font-weight: bold; }
+
+.media--homicideTable td:not(:first-child) {
+  text-align: center; }
+
+.media--homicideTable tr:nth-child(even) {
+  background-color: #ddd7d3; }
 
 .media--time {
   background-color: #495871;
   color: white; }
   .media--time .wrapper {
-    width: 100%; }
+    width: 100%;
+    text-align: center; }
+    .media--time .wrapper p {
+      text-align: left; }
     @media (min-width: 720px) {
       .media--time .wrapper {
         max-width: 700px;
         margin: 0 auto; } }
-  .media--time #time {
+    @media (min-width: 1020px) {
+      .media--time .wrapper {
+        max-width: 1000px; } }
+  .media--time .chartWrapper {
+    display: inline-block;
     width: 100%;
-    max-width: 500px;
-    margin: 0 auto; }
-
-table {
-  width: 100%; }
-
-th, td {
-  padding: .3em .5em;
-  font-family: "Inconsolata", serif; }
-  th:nth-child(4), td:nth-child(4) {
-    display: none; }
-    @media (min-width: 500px) {
-      th:nth-child(4), td:nth-child(4) {
-        display: table-cell; } }
-
-td:first-child {
-  font-weight: bold; }
-
-td:not(:first-child) {
-  text-align: center; }
-
-tr:nth-child(even) {
-  background-color: #ddd7d3; }
+    max-width: 310px;
+    margin: 0 1em 2em 1em; }
+    @media (min-width: 1020px) {
+      .media--time .chartWrapper {
+        max-width: 460px; } }
+  .media--time canvas {
+    width: 100%; }
 
 /* Leaderboard */
