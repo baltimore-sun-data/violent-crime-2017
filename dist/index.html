@@ -30,7 +30,32 @@
     <meta name="twitter:title" content="">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="">
-    <meta name="twitter:domain" content="baltimoresun.com">
+    <meta name="twitter:domain" content="baltimoresun.com">    <!-- Start: GPT Async -->
+    <script type='text/javascript'>
+      var gptadslots=[];
+      var googletag = googletag || {};
+      googletag.cmd = googletag.cmd || [];
+      (function(){ var gads = document.createElement('script');
+        gads.async = true; gads.type = 'text/javascript';
+        var useSSL = 'https:' == document.location.protocol;
+        gads.src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+        var node = document.getElementsByTagName('script')[0];
+        node.parentNode.insertBefore(gads, node);
+      })();
+    </script>
+
+    <script type="text/javascript">
+      googletag.cmd.push(function() {
+
+        //Adslot 1 declaration
+        gptadslots[1]= googletag.defineSlot('/4011/trb.baltimoresun', [[728,90]],'div-gpt-ad-529734999113274866-1').setTargeting('pos',['1']).addService(googletag.pubads());
+
+        googletag.pubads().setTargeting('ptype',['sf']);
+        googletag.pubads().enableAsyncRendering();
+        googletag.enableServices();
+      });
+    </script>
+    <!-- End: GPT -->
   </head>
   <body><script>
 	((((window.trb || (window.trb = {})).data || (trb.data = {})).metrics || (trb.data.metrics = {})).thirdparty = {
@@ -56,16 +81,16 @@
     <div class="container">
       <section>
         <div class="width--normal text">
-          <h1>Violent crime in Baltimore, 2012 - 2017</h1>
+          <h1>Violent crime in Baltimore, 2012-2017</h1>
           <p>Violent crime in Baltimore spiked after 2015. That year, homicides jumped 62 percent to 344, a figure unseen since the ‘90s. Carjackings, shootings, and commercial robberies all skyrocketed as overall violent crime rose 7.6 percent.</p>
           <p>Three years since that pivotal year, overall violent crime continues to climb in the city. Below, we look at how violent crime has changed in two distinct time periods — the three years before 2015 and the three years since.</p>
         </div>
         <div class="width--normal media media--chart">
-          <h3>Violent Crimes Totals, 2012 - 2017</h3>
+          <h3>Violent Crimes Totals, 2012-2017</h3>
           <canvas id="overall"></canvas>
         </div>
         <div class="width--float media media--crimeDefs">
-          <div class="wrapper">
+          <div class="wrapper wrapper--stretch">
             <h3>Types of violent crime</h3>
             <ul>
               <li>
@@ -101,26 +126,26 @@
           <p>Overall violent crime between these two time periods is up 9.5 percent. Most categories of violent crime either increased or stayed about the same, with the biggest percentage growths in homicides, shootings and robberies.</p>
         </div>
         <div class="width--normal media media--chart">
-          <h3>Violent Crimes by Type, 2012 - 2014, 2015 - 2017</h3>
-          <canvas id="bytype"></canvas>
+          <h3>Violent Crimes by Type, 2012-2017</h3>
+          <canvas id="byType"></canvas>
         </div>
       </section>
       <section>
         <div class="width--normal text">
           <h2>Homicides and Shootings</h2>
           <p>The 344 homicides that made 2015 such a deadly year may well be the new norm in the city as a third year closes with over 300 homicides.</p>
-          <p>Though homicides and shootings only make up a small percentage of overall violent crime, they saw the highest percentage jumps from 2015 to 2017.</p>
+          <p>Though homicides and shootings only make up a small percentage of overall violent crime, they saw one of the highest percentage jumps from 2015 to 2017.</p>
         </div>
         <div class="width--normal media media--chart">
-          <h3>Homicides and shootings, 2012 - 2017</h3>
+          <h3>Homicides and shootings, 2012-2017</h3>
           <canvas id="homicides"></canvas>
         </div>
         <div class="width--float media media--homicideTable">
-          <div class="wrapper">
+          <div class="wrapper wrapper--stretch">
             <h3>Areas with most shootings and homicides</h3>
             <table>
               <tr>
-                <th> </th>
+                <th></th>
                 <th>2012 - 2014</th>
                 <th>2015 - 2017</th>
                 <th>% change</th>
@@ -206,7 +231,7 @@
           <p>Moreover, 12 neighborhoods with the most shootings and homicides from 2015 to 2017 outpace the 47 shootings and homicides from Sandtown-Winchester pre-2015.</p>
         </div>
         <div class="width--wide media--time">
-          <div class="wrapper">
+          <div class="wrapper wrapper--stretch">
             <P>Shootings and killings are also occurring earlier in the day now. From 2012 and 2014, 48 percent of shootings and homicides took place between 9 p.m. and 3 a.m. That figure is down to 40 percent between 2015 and 2017. Shootings and homicides between 9 a.m. and 9 p.m. are up 7 percentage points.</P>
             <h3>Percentage of homicides and shootings by hour</h3>
             <div class="chartWrapper">
@@ -223,7 +248,452 @@
           <h2>Robberies</h2>
           <p>In raw numbers, robberies make up the bulk of the increase in violent crime in Baltimore. The city saw 3,875 more robberies between 2015 and 2017. Of these, street robberies are the most common.</p>
         </div>
+        <div class="width--normal media media--chart">
+          <h3>Robberies by Type, 2012-2014, 2015-2017</h3>
+          <canvas id="robberyType"></canvas>
+        </div>
+        <div class="width--normal text">
+          <p>The areas targeted most in street robberies include both neighborhoods known to experience high crime as well as those that people view as safe from more serious crimes such as shootings or homicides.</p>
+          <p>Street robberies in downtown Baltimore outpace all other neighborhoods, occurring nearly twice as often as the next neighborhood.</p>
+        </div>
+        <div class="width--float media media--stRobberyTable">
+          <div class="wrapper wrapper--stretch">
+            <h3>Areas with most street robberies, 2012-2017</h3>
+            <table>
+              <tr>
+                <th></th>
+                <th>Street Robberies</th>
+                <th>Shootings and Homicides</th>
+              </tr>
+              <tr>
+                <td>Downtown</td>
+                <td>500</td>
+                <td>36</td>
+              </tr>
+              <tr>
+                <td>Frankford</td>
+                <td>263</td>
+                <td>52</td>
+              </tr>
+              <tr>
+                <td>Belair-Edison</td>
+                <td>204</td>
+                <td>66</td>
+              </tr>
+              <tr>
+                <td>Patterson Park Neighborhood</td>
+                <td>193</td>
+                <td>7</td>
+              </tr>
+              <tr>
+                <td>Brooklyn</td>
+                <td>175</td>
+                <td>104</td>
+              </tr>
+              <tr>
+                <td>Bolton Hill</td>
+                <td>148</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>Baltimore Highlands</td>
+                <td>140</td>
+                <td>13</td>
+              </tr>
+              <tr>
+                <td>Fells Point</td>
+                <td>136</td>
+                <td>12</td>
+              </tr>
+              <tr>
+                <td>Hamilton Hills</td>
+                <td>136</td>
+                <td>19</td>
+              </tr>
+              <tr>
+                <td>Charles Village</td>
+                <td>135</td>
+                <td>5</td>
+              </tr>
+              <tr>
+                <td>Canton</td>
+                <td>133</td>
+                <td>4</td>
+              </tr>
+              <tr>
+                <td>Mount Vernon</td>
+                <td>131</td>
+                <td>4</td>
+              </tr>
+              <tr>
+                <td>Ednor Gardens-Lakeside</td>
+                <td>130</td>
+                <td>7</td>
+              </tr>
+              <tr>
+                <td>Central Park Heights</td>
+                <td>128</td>
+                <td>73</td>
+              </tr>
+              <tr>
+                <td>Charles North</td>
+                <td>125</td>
+                <td>14</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="width--float media media--carjacking">
+          <div class="wrapper">
+            <h3>Baltimore carjackings, 2012-2017</h3>
+            <canvas id="carjacking"></canvas>
+          </div>
+        </div>
+        <div class="width--normal text">
+          <p>Carjackings saw the largest percentage increases over the past three years. Though it is still the least common type of robbery in Baltimore, it has seen the largest change out of all violent crimes.</p>
+          <p>Most of the areas targeted in these carjackings are places that previously saw very few incidents.</p>
+        </div>
+        <div class="width--float media media--carjackingTable">
+          <div class="wrapper wrapper--stretch">
+            <h3>Areas with most carjackings, 2012-2017</h3>
+            <table>
+              <tr>
+                <th> </th>
+                <th>2012-2014</th>
+                <th>2015-2017</th>
+              </tr>
+              <tr>
+                <td>Coldspring</td>
+                <td>1</td>
+                <td>37</td>
+              </tr>
+              <tr>
+                <td>Gwynns Falls</td>
+                <td>2</td>
+                <td>24</td>
+              </tr>
+              <tr>
+                <td>Upton</td>
+                <td>5</td>
+                <td>23</td>
+              </tr>
+              <tr>
+                <td>Penn North</td>
+                <td>1</td>
+                <td>21</td>
+              </tr>
+              <tr>
+                <td>Sandtown-Winchester</td>
+                <td>5</td>
+                <td>20</td>
+              </tr>
+              <tr>
+                <td>Frankford</td>
+                <td>15</td>
+                <td>19</td>
+              </tr>
+              <tr>
+                <td>Harlem Park</td>
+                <td>2</td>
+                <td>19</td>
+              </tr>
+              <tr>
+                <td>Penrose/Fayette Street Outreach</td>
+                <td>4</td>
+                <td>18</td>
+              </tr>
+              <tr>
+                <td>Poppleton</td>
+                <td>5</td>
+                <td>18</td>
+              </tr>
+              <tr>
+                <td>Reservoir Hill</td>
+                <td>13</td>
+                <td>18</td>
+              </tr>
+              <tr>
+                <td>Washington Village/Pigtown</td>
+                <td>4</td>
+                <td>18</td>
+              </tr>
+              <tr>
+                <td>Berea</td>
+                <td>1</td>
+                <td>17</td>
+              </tr>
+              <tr>
+                <td>Lakeland</td>
+                <td>3</td>
+                <td>17</td>
+              </tr>
+              <tr>
+                <td>Woodmere</td>
+                <td>5</td>
+                <td>17</td>
+              </tr>
+              <tr>
+                <td>Bolton Hill</td>
+                <td>1</td>
+                <td>16</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="width--normal text">
+          <p>Commercial robberies have gone up 54 percent between the two time periods.</p>
+          <p>Most commercial robberies since 2012 occurred around the downtown area and major roads throughout the city. Similar to street robberies, downtown commercial robberies occured at twice the rate as the next neighborhood.</p>
+          <p>Major roads that are hit often include York Road, Reisterstown Road, Hartford Road, Belair Road, and Pulaski Highway.</p>
+          <p>Meanwhile, residential robberies are one of the few types of violent crime that went down over the past few years. Between 2015 and 2017, it’s dropped by about 6 percent.</p>
+          <p>Explore where these commercial and residential robberies occur in the map below.</p>
+        </div>
+        <div class="width--normal media">
+          <div class="wrapper">
+            <h3>Commercial and residential robberies, 2012-2017</h3>
+            <iframe width="100%" height="520" frameborder="0" src="https://baltsun.carto.com/builder/44076805-8dc3-4c0f-9019-9f1aebd56349/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+          </div>
+        </div>
       </section>
+      <section>
+        <div class="width--normal text">
+          <h2>Assaults</h2>
+          <p>While aggravated and common assault are the most common of violent crimes, these did not change as drastically over the past three years. In fact, while the number of aggravated assault incidents rose 11 percent, common assault dropped 11 percent.</p>
+          <p>The areas with the most aggravated assault incidents pre-2015 remained the same ones with the most incidents between 2015 and 2017. Of those, Brooklyn, Central Park Heights, Dunbar-Broadway had the biggest increases at about 50 percent.</p>
+        </div>
+        <div class="width--float media media--aggAssaultsTable">
+          <div class="wrapper wrapper--stretch">
+            <h3>Areas with most aggravated assaults, 2012-2017</h3>
+            <table>
+              <tr>
+                <th> </th>
+                <th>2012-2014</th>
+                <th>2015-2017</th>
+                <th>% change</th>
+              </tr>
+              <tr>
+                <td>Sandtown-Winchester</td>
+                <td>344</td>
+                <td>431</td>
+                <td>25%</td>
+              </tr>
+              <tr>
+                <td>Downtown</td>
+                <td>386</td>
+                <td>430</td>
+                <td>11%</td>
+              </tr>
+              <tr>
+                <td>Brooklyn</td>
+                <td>256</td>
+                <td>392</td>
+                <td>53%</td>
+              </tr>
+              <tr>
+                <td>Cherry Hill</td>
+                <td>267</td>
+                <td>331</td>
+                <td>24%</td>
+              </tr>
+              <tr>
+                <td>Belair-Edison</td>
+                <td>261</td>
+                <td>312</td>
+                <td>20%</td>
+              </tr>
+              <tr>
+                <td>Central Park Heights</td>
+                <td>213</td>
+                <td>304</td>
+                <td>43%</td>
+              </tr>
+              <tr>
+                <td>Frankford</td>
+                <td>277</td>
+                <td>300</td>
+                <td>8%</td>
+              </tr>
+              <tr>
+                <td>Upton</td>
+                <td>231</td>
+                <td>253</td>
+                <td>10%</td>
+              </tr>
+              <tr>
+                <td>Carrollton Ridge</td>
+                <td>203</td>
+                <td>249</td>
+                <td>23%</td>
+              </tr>
+              <tr>
+                <td>Broadway East</td>
+                <td>216</td>
+                <td>235</td>
+                <td>9%</td>
+              </tr>
+              <tr>
+                <td>Coldstream Homestead Mont</td>
+                <td>236</td>
+                <td>222</td>
+                <td>-6%</td>
+              </tr>
+              <tr>
+                <td>Dunbar-Broadway</td>
+                <td>134</td>
+                <td>215</td>
+                <td>60%</td>
+              </tr>
+              <tr>
+                <td>McElderry Park</td>
+                <td>182</td>
+                <td>197</td>
+                <td>8%</td>
+              </tr>
+              <tr>
+                <td>Mondawmin</td>
+                <td>181</td>
+                <td>192</td>
+                <td>6%</td>
+              </tr>
+              <tr>
+                <td>Ellwood Park/Monument</td>
+                <td>162</td>
+                <td>166</td>
+                <td>2%</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="width--normal text">
+          <p>Some other neighborhoods had fewer incidents but saw huge percentage increases in aggravated assault incidents.</p>
+        </div>
+        <div class="width--float media media--aggAssaultSpikesTable">
+          <div class="wrapper wrapper--stretch">
+            <h3>Aggravated assault spikes, 2012-2017</h3>
+            <table>
+              <tr>
+                <th> </th>
+                <th>2015-2017</th>
+                <th>% change</th>
+              </tr>
+              <tr>
+                <td>Penn-Fallsway</td>
+                <td>100</td>
+                <td>270%</td>
+              </tr>
+              <tr>
+                <td>Middle Branch/Reedbird Parks</td>
+                <td>83</td>
+                <td>219%</td>
+              </tr>
+              <tr>
+                <td>Gwynns Falls</td>
+                <td>69</td>
+                <td>245%</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="width--normal text text--clear">
+          <p>Most neighborhoods with the most common assault incidents saw decreases over the past three years, but many of these neighborhoods are the same that saw spikes in aggravated assault, homicides, shootings and robberies.</p>
+          <p>Carroll - Canton Industrial Area bucked the trend and saw a 270 percent jump in common assaults from 63 incidents to 235.</p>
+        </div>
+      </section>
+      <section>
+        <div class="width--normal text">
+          <h2>Rape</h2>
+          <p>The shift in the number of rape incidents appears to be scattered throughout neighborhoods. Some neighborhoods with the most incidents in the past, like downtown Baltimore, saw small decreases, but overall numbers are up about 7 percent.</p>
+          <p>Most incidents occur in areas where other violent crime is prevalent.</p>
+        </div>
+        <div class="width--float media">
+          <div class="wrapper wrapper--stretch">
+            <h3>Areas with most rapes, 2012-2017</h3>
+            <table>
+              <tr>
+                <th> </th>
+                <th>2012-2014</th>
+                <th>2015-2017</th>
+              </tr>
+              <tr>
+                <td>Downtown</td>
+                <td>50</td>
+                <td>37</td>
+              </tr>
+              <tr>
+                <td>Brooklyn</td>
+                <td>22</td>
+                <td>22</td>
+              </tr>
+              <tr>
+                <td>Belair-Edison</td>
+                <td>15</td>
+                <td>20</td>
+              </tr>
+              <tr>
+                <td>Sandtown-Winchester</td>
+                <td>18</td>
+                <td>20</td>
+              </tr>
+              <tr>
+                <td>Frankford</td>
+                <td>25</td>
+                <td>20</td>
+              </tr>
+              <tr>
+                <td>Carrollton Ridge</td>
+                <td>12</td>
+                <td>17</td>
+              </tr>
+              <tr>
+                <td>Cherry Hill</td>
+                <td>18</td>
+                <td>16</td>
+              </tr>
+              <tr>
+                <td>Upton</td>
+                <td>9</td>
+                <td>14</td>
+              </tr>
+              <tr>
+                <td>Baltimore Highlands</td>
+                <td>4</td>
+                <td>13</td>
+              </tr>
+              <tr>
+                <td>Central Park Heights</td>
+                <td>5</td>
+                <td>13</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="width--normal media">
+          <div class="wrapper">
+            <h3>Baltimore rape incidents, 2012-2017</h3>
+            <iframe width="100%" height="520" frameborder="0" src="https://baltsun.carto.com/builder/487c4b8e-2ea0-4068-970c-057e6c99872e/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="width--normal text">
+          <h2>Firearms</h2>
+          <p>The prevalence of guns in the streets may be contributing to the rise in violent crime. Between 2015 and 2017, 25 percent of violent crimes were committed using firearms, up 8 percent compared to 2012-2014.</p>
+        </div>
+        <div class="width--float media media--weapons">
+          <div class="wrapper">
+            <h3>Weapons used in violent crimes, 2012-2017</h3>
+            <canvas id="weapons"></canvas>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div id="leaderboard"><!-- Beginning Async AdSlot 1 for Ad unit trb.baltimoresun  ### size: [[728,90]] -->
+      <!-- Adslot's refresh function: googletag.pubads().refresh([gptadslots[1]]) -->
+      <div id='div-gpt-ad-529734999113274866-1'>
+        <script type='text/javascript'>
+          googletag.cmd.push(function() { googletag.display('div-gpt-ad-529734999113274866-1'); });
+        </script>
+      </div>
+<!-- End AdSlot 1 -->
     </div>
     <!--Javascript-->
     <script src="js/min/jquery-3.0.0.min.js"></script>

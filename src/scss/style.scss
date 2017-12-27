@@ -47,13 +47,21 @@ h3 {
 table {
 	width: 100%;
 }
+tr {
+	&:nth-child(even) {
+		background-color: lighten($desert,7);
+	}
+}
 th, td {
 	padding: .3em .5em;
 	font-family: $inconsolata;
 }
-tr {
-	&:nth-child(even) {
-		background-color: lighten($desert,7);
+td {
+	&:first-child {
+		font-weight: bold;
+	}
+	&:not(:first-child) {
+		text-align: center;
 	}
 }
 
@@ -93,33 +101,43 @@ section {
 		@media(min-width: 1020px){
 			max-width: 1000px;
 		}
-	}
-}
-.text {
-
-}
-.media {
-	&--chart {
-		clear: both;
-	}
-	&--crimeDefs {
 		.wrapper {
+			position: relative;
 			width: 100%;
-			background-color: $desert;
 			padding: 1em;
-			@media(min-width: 720px){
-				max-width: 380px;
-				position: relative;
-				margin: 1em 0 1em 1em;
-				float: right;
+			&--stretch {
+				background-color: $desert;
 				&:after {
 					position: absolute;
 					content: "";
 					width: 250%;
 					height: 100%;
 					top: 0;
-					@include striped-background(90deg, 1em, $desert, white);
+					@include striped-background(90deg, 1em, white, $desert);
 					z-index: -1;
+				}
+				h3 {
+					margin-top: 0;
+				}
+			}
+		}
+	}
+}
+.text {
+	&--clear {
+		clear: both;
+	}
+}
+.media {
+	clear: both;
+	&--crimeDefs {
+		.wrapper {
+			@media(min-width: 720px){
+				max-width: 380px;
+				margin: 1em 0 1em 1em;
+				float: right;
+				&:after {
+					right: -250%;
 				}
 				@media(min-width: 1020px){
 					max-width: 680px;
@@ -152,19 +170,8 @@ section {
 	}
 	&--homicideTable {
 		.wrapper {
-			position: relative;
-			width: 100%;
-			background-color: $desert;
-			padding: 1em;
 			&:after {
-				position: absolute;
-				content: "";
-				width: 250%;
-				height: 100%;
-				top: 0;
 				left: -250%;
-				@include striped-background(90deg, 1em, white, $desert);
-				z-index: -1;
 			}
 			@media(min-width: 1020px){
 				max-width: 680px;
@@ -172,28 +179,12 @@ section {
 				float: left;
 			}
 		}
-		h3 {
-			margin-top: 0;
-		}
 		th, td {
 			&:nth-child(4) {
 				display: none;
 				@media(min-width: 500px) {
 					display: table-cell;
 				}
-			}
-		}
-		td {
-			&:first-child {
-				font-weight: bold;
-			}
-			&:not(:first-child) {
-				text-align: center;
-			}
-		}
-		tr {
-			&:nth-child(even) {
-				background-color: lighten($desert,7);
 			}
 		}
 	}
@@ -225,6 +216,66 @@ section {
 		}
 		canvas {
 			width: 100%;
+		}
+	}
+	&--stRobberyTable {
+		.wrapper {
+			&:after {
+				left: -250%;
+			}
+		}
+		th, td {
+			&:nth-child(3) {
+				display: none;
+				@media(min-width: 500px) {
+					display: table-cell;
+				}
+			}
+		}
+	}
+	&--carjacking {
+		.wrapper {
+			@media(min-width: 720px){
+				max-width: 380px;
+				margin: 1em 1em 1em 0;
+				float: left;
+			}
+			@media(min-width: 1020px){
+				max-width: 680px;
+			}
+		}
+	}
+	&--carjackingTable {
+		.wrapper {
+			&:after {
+				right: -250%;
+			}
+		}
+		th, td {
+			&:nth-child(2) {
+				display: none;
+				@media(min-width: 500px) {
+					display: table-cell;
+				}
+			}
+		}
+	}
+	&--aggAssaultsTable {
+
+	}
+	&--aggAssaultSpikesTable {
+		.wrapper {
+			@media(min-width: 720px){
+				max-width: 500px;
+				margin: 1em 1em 1em 0;
+				float: left;
+				&:after {
+					left: -250%;
+				}
+				@media(min-width: 1020px){
+					max-width: 720px;
+				}
+			}
 		}
 	}
 }
