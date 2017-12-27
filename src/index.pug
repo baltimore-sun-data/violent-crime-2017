@@ -1,5 +1,5 @@
 //- I use this datalink variable to quickly switch between using local assets and using uploaded assets.
-- var datalink = "http://data.baltimoresun.com/PROJECTLINK/"
+- var datalink = "http://data.baltimoresun.com/news/violent-crime-2017/"
 - var datalink = ""
 
 doctype html
@@ -13,9 +13,9 @@ html(class="no-js", lang="en")
 	head
 		//Basic page needs
 		meta(charset="utf-8")
-		title
-		meta(name="description", content="")
-		meta(name="author", content="")
+		title Violent crime in Baltimore, 2012-2017
+		meta(name="description", content="Violent crime in Baltimore spiked after 2015. Three years since that pivotal year, overall violent crime continues to climb in the city.")
+		meta(name="author", content="The Baltimore Sun")
 		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
 		//- Fonts and icons. Remove fontawesome if you are not using any custom icons.
 		link(rel="stylesheet", type="text/css", href="http://fonts.googleapis.com/css?family=Old+Standard+TT|Lato|Montserrat|Droid+Serif|Noto+Serif|Inconsolata")
@@ -23,18 +23,18 @@ html(class="no-js", lang="en")
 		link(rel="stylesheet", type="text/css", href=datalink + "css/style.css")
 
 		//Facebook Stuff
-		meta(property="og:title", content="")
-		meta(property="og:url", content="")
+		meta(property="og:title", content="Violent crime in Baltimore, 2012-2017")
+		meta(property="og:url", content="http://data.baltimoresun.com/news/violent-crime-2017/")
 		meta(property="og:image", content="")
 		meta(property="og:site_name", content="The Baltimore Sun")
-		meta(property="og:description", content="")
+		meta(property="og:description", content="Violent crime in Baltimore spiked after 2015. Three years since that pivotal year, overall violent crime continues to climb in the city.")
 		meta(property="fb:app_id", content="310302989040998")
 		//Twitter Stuff
 		meta(name="twitter:card", content="summary")
 		meta(name="twitter:site", content="@baltimoresun")
-		meta(name="twitter:creator", content="")
-		meta(name="twitter:title", content="")
-		meta(name="twitter:description", content="")
+		meta(name="twitter:creator", content="@baltsundata")
+		meta(name="twitter:title", content="Violent crime in Baltimore, 2012-2017")
+		meta(name="twitter:description", content="Violent crime in Baltimore spiked after 2015. Three years since that pivotal year, overall violent crime continues to climb in the city.")
 		meta(name="twitter:image", content="")
 		meta(name="twitter:domain", content="baltimoresun.com")
 
@@ -49,9 +49,18 @@ html(class="no-js", lang="en")
 		.container
 			section
 				.width--normal.text
-					h1 Violent crime in Baltimore, 2012-2017
-					p Violent crime in Baltimore spiked after 2015. That year, homicides jumped 62 percent to 344, a figure unseen since the ‘90s. Carjackings, shootings, and commercial robberies all skyrocketed as overall violent crime rose 7.6 percent.
+					.background
+						img(src="images/crime.jpg")
+						h1 Violent crime in Baltimore, 2012-2017
+						p.byline By 
+							a(href="http://www.baltimoresun.com/bal-jin-kim-20150615-staff.html" target="_blank") Jin Bae Kim
+						.shareTools
+							i.fa.fa-facebook
+							i.fa.fa-twitter
+				.width--normal.text
+					p Violent crime in Baltimore spiked after 2015. That year, homicides jumped 62 percent to 344, a figure previously unseen since the ‘90s. Carjackings, shootings, and commercial robberies all skyrocketed as overall violent crime rose 7.6 percent.
 					p Three years since that pivotal year, overall violent crime continues to climb in the city. Below, we look at how violent crime has changed in two distinct time periods — the three years before 2015 and the three years since.
+					p.dataCredit *Data from Baltimore Police Department, current as of 12/1/2017
 				.width--normal.media.media--chart
 					h3 Violent Crimes Totals, 2012-2017
 					canvas#overall
@@ -511,7 +520,6 @@ html(class="no-js", lang="en")
 					.wrapper
 						h3 Baltimore rape incidents, 2012-2017
 						iframe(width="100%" height="520" frameborder="0" src="https://baltsun.carto.com/builder/487c4b8e-2ea0-4068-970c-057e6c99872e/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen)
-
 			section
 				.width--normal.text
 					h2 Firearms
@@ -520,15 +528,9 @@ html(class="no-js", lang="en")
 					.wrapper
 						h3 Weapons used in violent crimes, 2012-2017
 						canvas#weapons
-
-
-
-				//- .media
-				//- 	img(src="http://via.placeholder.com/700x400")
-
-		//- Ad tag, uncomment to put in ad. Be sure to uncomment the ad-for-header above.
-		#leaderboard
-			include includes/ad-for-body.html
+				//- Ad tag, uncomment to put in ad. Be sure to uncomment the ad-for-header above.
+				#leaderboard
+					include includes/ad-for-body.html
 
 		//Javascript
 		script(src=datalink + "js/min/jquery-3.0.0.min.js")

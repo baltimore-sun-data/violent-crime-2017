@@ -482,7 +482,11 @@ a {
   text-decoration: none; }
 
 h1 {
+  margin-bottom: .2em;
   font-size: 4em; }
+  @media (min-width: 1020px) {
+    h1 {
+      font-size: 6em; } }
 
 h2 {
   font-size: 3em; }
@@ -554,8 +558,27 @@ td:not(:first-child) {
       .width--float .wrapper--stretch h3 {
         margin-top: 0; }
 
+.shareTools i {
+  font-size: 1.5em;
+  margin-right: .5em;
+  cursor: pointer; }
+  .shareTools i:hover {
+    color: #6b6b6b; }
+
 .text--clear {
   clear: both; }
+
+.text .background {
+  position: relative;
+  width: 100%; }
+  .text .background h1 {
+    position: absolute;
+    bottom: 1em;
+    left: 0; }
+  .text .background img {
+    width: 100%;
+    top: 0;
+    left: 0; }
 
 .media {
   clear: both; }
@@ -645,6 +668,11 @@ td:not(:first-child) {
     @media (min-width: 500px) {
       .media--carjackingTable th:nth-child(2), .media--carjackingTable td:nth-child(2) {
         display: table-cell; } }
+  .media--aggAssaultsTable th:nth-child(2), .media--aggAssaultsTable td:nth-child(2) {
+    display: none; }
+    @media (min-width: 500px) {
+      .media--aggAssaultsTable th:nth-child(2), .media--aggAssaultsTable td:nth-child(2) {
+        display: table-cell; } }
   @media (min-width: 720px) {
     .media--aggAssaultSpikesTable .wrapper {
       max-width: 500px;
@@ -656,4 +684,17 @@ td:not(:first-child) {
     .media--aggAssaultSpikesTable .wrapper {
       max-width: 720px; } }
 
+.dataCredit {
+  color: #999;
+  font-style: italic; }
+
 /* Leaderboard */
+#leaderboard {
+  width: 728px;
+  height: 90px;
+  background-color: #222222;
+  margin: 10px auto;
+  text-align: center; }
+  @media (max-width: 730px) {
+    #leaderboard {
+      display: none; } }
