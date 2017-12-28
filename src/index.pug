@@ -20,12 +20,12 @@ html(class="no-js", lang="en")
 		//- Fonts and icons. Remove fontawesome if you are not using any custom icons.
 		link(rel="stylesheet", type="text/css", href="http://fonts.googleapis.com/css?family=Old+Standard+TT|Lato|Montserrat|Droid+Serif|Noto+Serif|Inconsolata")
 		link(rel="stylesheet" href=datalink + "css/font-awesome.min.css")
-		link(rel="stylesheet", type="text/css", href=datalink + "css/style.css")
+		link(rel="stylesheet", type="text/css", href=datalink + "css/style.css?1")
 
 		//Facebook Stuff
 		meta(property="og:title", content="Violent crime in Baltimore, 2012-2017")
 		meta(property="og:url", content="http://data.baltimoresun.com/news/violent-crime-2017/")
-		meta(property="og:image", content="")
+		meta(property="og:image", content="http://data.baltimoresun.com/news/violent-crime-2017/images/thumb.jpg")
 		meta(property="og:site_name", content="The Baltimore Sun")
 		meta(property="og:description", content="Violent crime in Baltimore spiked after 2015. Three years since that pivotal year, overall violent crime continues to climb in the city.")
 		meta(property="fb:app_id", content="310302989040998")
@@ -35,7 +35,7 @@ html(class="no-js", lang="en")
 		meta(name="twitter:creator", content="@baltsundata")
 		meta(name="twitter:title", content="Violent crime in Baltimore, 2012-2017")
 		meta(name="twitter:description", content="Violent crime in Baltimore spiked after 2015. Three years since that pivotal year, overall violent crime continues to climb in the city.")
-		meta(name="twitter:image", content="")
+		meta(name="twitter:image", content="http://data.baltimoresun.com/news/violent-crime-2017/images/thumb.jpg")
 		meta(name="twitter:domain", content="baltimoresun.com")
 
 		//- Ad tag, uncomment to put in ad. Be sure to uncomment the ad-for-body below.
@@ -60,10 +60,13 @@ html(class="no-js", lang="en")
 				.width--normal.text
 					p Violent crime in Baltimore spiked after 2015. That year, homicides jumped 62 percent to 344, a figure previously unseen since the ‘90s. Carjackings, shootings, and commercial robberies all skyrocketed as overall violent crime rose 7.6 percent.
 					p Three years since that pivotal year, overall violent crime continues to climb in the city. Below, we look at how violent crime has changed in two distinct time periods — the three years before 2015 and the three years since.
-					p.dataCredit *Data from Baltimore Police Department, current as of 12/1/2017
+					p.disclaimer *Data from Baltimore Police Department, current as of 12/1/2017
 				.width--normal.media.media--chart
 					h3 Violent Crimes Totals, 2012-2017
 					canvas#overall
+					p.source
+						span Source: 
+						| Baltimore Police Department Victim-Based Crime Data, 2012 - 12/1/2017
 				.width--float.media.media--crimeDefs
 					.wrapper.wrapper--stretch
 						h3 Types of violent crime
@@ -97,14 +100,22 @@ html(class="no-js", lang="en")
 				.width--normal.media.media--chart
 					h3 Violent Crimes by Type, 2012-2017
 					canvas#byType
+					p.source
+						span Source: 
+						| Baltimore Police Department Victim-Based Crime Data, 2012 - 12/1/2017
 			section
 				.width--normal.text
 					h2 Homicides and Shootings
 					p The 344 homicides that made 2015 such a deadly year may well be the new norm in the city as a third year closes with over 300 homicides.
 					p Though homicides and shootings only make up a small percentage of overall violent crime, they saw one of the highest percentage jumps from 2015 to 2017.
+					p.disclaimer *While this data is current as of 12/1/2017, homicides have since risen to 343, reaching a new record in killngs per capita. 
+						a(href="http://www.baltimoresun.com/news/maryland/crime/bs-md-ci-per-capita-homicides-20171227-story.html" target="_blank") Read more.
 				.width--normal.media.media--chart
 					h3 Homicides and shootings, 2012-2017
 					canvas#homicides
+					p.source
+						span Source: 
+						| Baltimore Police Department Victim-Based Crime Data, 2012 - 12/1/2017
 				.width--float.media.media--homicideTable
 					.wrapper.wrapper--stretch
 						h3 Areas with most shootings and homicides
@@ -174,6 +185,9 @@ html(class="no-js", lang="en")
 								td 18
 								td 48
 								td 167%
+						p.source
+							span Source: 
+							| Baltimore Police Department Victim-Based Crime Data, 2012 - 12/1/2017
 				.width--normal.text
 					p The neighborhoods with the most shootings and homicides today are largely the same ones from 2012-2014, but many saw massive spikes in numbers.
 					p From 2012-2014, Sandtown-Winchester had 47 shootings and homicides, the most of any other neighborhood. Since then, Sandtown-Winchester still remains the deadliest neighborhood at 121 shootings and killings — 2.5 times its previous rate.
@@ -186,6 +200,9 @@ html(class="no-js", lang="en")
 							canvas#timeAM
 						.chartWrapper
 							canvas#timePM
+						p.source
+							span Source: 
+							| Baltimore Police Department Victim-Based Crime Data, 2012 - 12/1/2017
 			section
 				.width--normal.text
 					h2 Robberies
@@ -193,6 +210,9 @@ html(class="no-js", lang="en")
 				.width--normal.media.media--chart
 					h3 Robberies by Type, 2012-2014, 2015-2017
 					canvas#robberyType
+					p.source
+						span Source: 
+						| Baltimore Police Department Victim-Based Crime Data, 2012 - 12/1/2017
 				.width--normal.text
 					p The areas targeted most in street robberies include both neighborhoods known to experience high crime as well as those that people view as safe from more serious crimes such as shootings or homicides.
 					p Street robberies in downtown Baltimore outpace all other neighborhoods, occurring nearly twice as often as the next neighborhood.
@@ -264,10 +284,16 @@ html(class="no-js", lang="en")
 								td Charles North
 								td 125
 								td 14
+						p.source
+							span Source: 
+							| Baltimore Police Department Victim-Based Crime Data, 2012 - 12/1/2017
 				.width--float.media.media--carjacking
 					.wrapper
 						h3 Baltimore carjackings, 2012-2017
 						canvas#carjacking
+						p.source
+							span Source: 
+							| Baltimore Police Department Victim-Based Crime Data, 2012 - 12/1/2017
 				.width--normal.text
 					p Carjackings saw the largest percentage increases over the past three years. Though it is still the least common type of robbery in Baltimore, it has seen the largest change out of all violent crimes.
 					p Most of the areas targeted in these carjackings are places that previously saw very few incidents.
@@ -339,6 +365,9 @@ html(class="no-js", lang="en")
 								td Bolton Hill
 								td 1
 								td 16
+						p.source
+							span Source: 
+							| Baltimore Police Department Victim-Based Crime Data, 2012 - 12/1/2017
 				.width--normal.text
 					p Commercial robberies have gone up 54 percent between the two time periods.
 					p Most commercial robberies since 2012 occurred around the downtown area and major roads throughout the city. Similar to street robberies, downtown commercial robberies occured at twice the rate as the next neighborhood.
@@ -349,6 +378,9 @@ html(class="no-js", lang="en")
 					.wrapper
 						h3 Commercial and residential robberies, 2012-2017
 						iframe(width="100%" height="520" frameborder="0" src="https://baltsun.carto.com/builder/44076805-8dc3-4c0f-9019-9f1aebd56349/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen)
+						p.source
+							span Source: 
+							| Baltimore Police Department Victim-Based Crime Data, 2012 - 12/1/2017
 			section
 				.width--normal.text
 					h2 Assaults
@@ -438,6 +470,9 @@ html(class="no-js", lang="en")
 								td 162
 								td 166
 								td 2%
+						p.source
+							span Source: 
+							| Baltimore Police Department Victim-Based Crime Data, 2012 - 12/1/2017
 				.width--normal.text
 					p Some other neighborhoods had fewer incidents but saw huge percentage increases in aggravated assault incidents.
 				.width--float.media.media--aggAssaultSpikesTable
@@ -460,13 +495,16 @@ html(class="no-js", lang="en")
 								td Gwynns Falls
 								td 69
 								td 245%
+						p.source
+							span Source: 
+							| Baltimore Police Department Victim-Based Crime Data, 2012 - 12/1/2017
 				.width--normal.text.text--clear
 					p Most neighborhoods with the most common assault incidents saw decreases over the past three years, but many of these neighborhoods are the same that saw spikes in aggravated assault, homicides, shootings and robberies.
 					p Carroll - Canton Industrial Area bucked the trend and saw a 270 percent jump in common assaults from 63 incidents to 235.
 			section
 				.width--normal.text
 					h2 Rape
-					p The shift in the number of rape incidents appears to be scattered throughout neighborhoods. Some neighborhoods with the most incidents in the past, like downtown Baltimore, saw small decreases, but overall numbers are up about 7 percent.
+					p The shift in the number of rape incidents appears to be scattered throughout neighborhoods. Some neighborhoods with the most incidents in the past, like downtown Baltimore, saw significant decreases, but overall numbers are up about 7 percent.
 					p Most incidents occur in areas where other violent crime is prevalent.
 				.width--float.media
 					.wrapper.wrapper--stretch
@@ -516,10 +554,16 @@ html(class="no-js", lang="en")
 								td Central Park Heights
 								td 5
 								td 13
+						p.source
+							span Source: 
+							| Baltimore Police Department Victim-Based Crime Data, 2012 - 12/1/2017
 				.width--normal.media
 					.wrapper
 						h3 Baltimore rape incidents, 2012-2017
 						iframe(width="100%" height="520" frameborder="0" src="https://baltsun.carto.com/builder/487c4b8e-2ea0-4068-970c-057e6c99872e/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen)
+						p.source
+							span Source: 
+							| Baltimore Police Department Victim-Based Crime Data, 2012 - 12/1/2017
 			section
 				.width--normal.text
 					h2 Firearms
@@ -528,13 +572,24 @@ html(class="no-js", lang="en")
 					.wrapper
 						h3 Weapons used in violent crimes, 2012-2017
 						canvas#weapons
-				//- Ad tag, uncomment to put in ad. Be sure to uncomment the ad-for-header above.
+						p.source
+							span Source: 
+							| Baltimore Police Department Victim-Based Crime Data, 2012 - 12/1/2017
+			section
+				.width--normal.text
+					h2 Further reading
+					p
+						a(href="http://www.baltimoresun.com/news/maryland/crime/bs-md-ci-per-capita-homicides-20171227-story.html" target="_blank") Baltimore has now had 343 homicides in 2017, sets record for killings per capita
+					p
+						a(href="http://www.baltimoresun.com/news/maryland/crime/bs-md-timeline-of-violence-in-baltimore-20171116-htmlstory.html" target="_blank") Graphic: A timeline of violence in Baltimore
+					p
+						a(href="http://data.baltimoresun.com/news/police/homicides/" target="_blank") Baltimore City Homicide Map
 				#leaderboard
 					include includes/ad-for-body.html
 
 		//Javascript
-		script(src=datalink + "js/min/jquery-3.0.0.min.js")
+		script(src=datalink + "js/min/jquery-3.0.0.min.js?1")
 		script(src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js")
-		script(src=datalink + "js/app.js")
+		script(src=datalink + "js/app.js?1")
 		//- script(src=datalink + "js/app.min.js")
 

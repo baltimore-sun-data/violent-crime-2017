@@ -4,14 +4,14 @@ var violentCrime = {
 		violentCrime.charts();
 	},
 	share: function(){
-		$(".icon-twitter").on("click", function(){
+		$(".fa-twitter").on("click", function(){
 			var tweet = "Violent crime in Baltimore spiked after 2015. Three years since that pivotal year, overall violent crime continues to climb in the city."; //Tweet text
 			var url = "http://data.baltimoresun.com/news/violent-crime-2017/"; //Interactive URL
 			var twitter_url = "https://twitter.com/intent/tweet?text="+tweet+"&url="+url+"&tw_p=tweetbutton";
 			window.open(twitter_url, 'mywin','left=200,top=200,width=500,height=300,toolbar=1,resizable=0'); return false;
 		});
-		$(".icon-facebook").on("click", function(){
-			var picture = ""; //Picture URL
+		$(".fa-facebook").on("click", function(){
+			var picture = "http://data.baltimoresun.com/news/violent-crime-2017/images/thumb.jpg"; //Picture URL
 			var title = "Violent crime in Baltimore, 2012-2017"; //Post title
 			var description = "Violent crime in Baltimore spiked after 2015. Three years since that pivotal year, overall violent crime continues to climb in the city."; //Post description
 			var url = "http://data.baltimoresun.com/news/violent-crime-2017/"; //Interactive URL

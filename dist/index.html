@@ -15,11 +15,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Old+Standard+TT|Lato|Montserrat|Droid+Serif|Noto+Serif|Inconsolata">
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css?1">
     <!--Facebook Stuff-->
     <meta property="og:title" content="Violent crime in Baltimore, 2012-2017">
     <meta property="og:url" content="http://data.baltimoresun.com/news/violent-crime-2017/">
-    <meta property="og:image" content="">
+    <meta property="og:image" content="http://data.baltimoresun.com/news/violent-crime-2017/images/thumb.jpg">
     <meta property="og:site_name" content="The Baltimore Sun">
     <meta property="og:description" content="Violent crime in Baltimore spiked after 2015. Three years since that pivotal year, overall violent crime continues to climb in the city.">
     <meta property="fb:app_id" content="310302989040998">
@@ -29,7 +29,7 @@
     <meta name="twitter:creator" content="@baltsundata">
     <meta name="twitter:title" content="Violent crime in Baltimore, 2012-2017">
     <meta name="twitter:description" content="Violent crime in Baltimore spiked after 2015. Three years since that pivotal year, overall violent crime continues to climb in the city.">
-    <meta name="twitter:image" content="">
+    <meta name="twitter:image" content="http://data.baltimoresun.com/news/violent-crime-2017/images/thumb.jpg">
     <meta name="twitter:domain" content="baltimoresun.com">    <!-- Start: GPT Async -->
     <script type='text/javascript'>
       var gptadslots=[];
@@ -90,11 +90,12 @@
         <div class="width--normal text">
           <p>Violent crime in Baltimore spiked after 2015. That year, homicides jumped 62 percent to 344, a figure previously unseen since the ‘90s. Carjackings, shootings, and commercial robberies all skyrocketed as overall violent crime rose 7.6 percent.</p>
           <p>Three years since that pivotal year, overall violent crime continues to climb in the city. Below, we look at how violent crime has changed in two distinct time periods — the three years before 2015 and the three years since.</p>
-          <p class="dataCredit">*Data from Baltimore Police Department, current as of 12/1/2017</p>
+          <p class="disclaimer">*Data from Baltimore Police Department, current as of 12/1/2017</p>
         </div>
         <div class="width--normal media media--chart">
           <h3>Violent Crimes Totals, 2012-2017</h3>
           <canvas id="overall"></canvas>
+          <p class="source"><span>Source: </span>Baltimore Police Department Victim-Based Crime Data, 2012 - 12/1/2017</p>
         </div>
         <div class="width--float media media--crimeDefs">
           <div class="wrapper wrapper--stretch">
@@ -135,6 +136,7 @@
         <div class="width--normal media media--chart">
           <h3>Violent Crimes by Type, 2012-2017</h3>
           <canvas id="byType"></canvas>
+          <p class="source"><span>Source: </span>Baltimore Police Department Victim-Based Crime Data, 2012 - 12/1/2017</p>
         </div>
       </section>
       <section>
@@ -142,10 +144,12 @@
           <h2>Homicides and Shootings</h2>
           <p>The 344 homicides that made 2015 such a deadly year may well be the new norm in the city as a third year closes with over 300 homicides.</p>
           <p>Though homicides and shootings only make up a small percentage of overall violent crime, they saw one of the highest percentage jumps from 2015 to 2017.</p>
+          <p class="disclaimer">*While this data is current as of 12/1/2017, homicides have since risen to 343, reaching a new record in killngs per capita. <a href="http://www.baltimoresun.com/news/maryland/crime/bs-md-ci-per-capita-homicides-20171227-story.html" target="_blank">Read more.</a></p>
         </div>
         <div class="width--normal media media--chart">
           <h3>Homicides and shootings, 2012-2017</h3>
           <canvas id="homicides"></canvas>
+          <p class="source"><span>Source: </span>Baltimore Police Department Victim-Based Crime Data, 2012 - 12/1/2017</p>
         </div>
         <div class="width--float media media--homicideTable">
           <div class="wrapper wrapper--stretch">
@@ -230,6 +234,7 @@
                 <td>167%</td>
               </tr>
             </table>
+            <p class="source"><span>Source: </span>Baltimore Police Department Victim-Based Crime Data, 2012 - 12/1/2017</p>
           </div>
         </div>
         <div class="width--normal text">
@@ -247,6 +252,7 @@
             <div class="chartWrapper">
               <canvas id="timePM"></canvas>
             </div>
+            <p class="source"><span>Source: </span>Baltimore Police Department Victim-Based Crime Data, 2012 - 12/1/2017</p>
           </div>
         </div>
       </section>
@@ -258,6 +264,7 @@
         <div class="width--normal media media--chart">
           <h3>Robberies by Type, 2012-2014, 2015-2017</h3>
           <canvas id="robberyType"></canvas>
+          <p class="source"><span>Source: </span>Baltimore Police Department Victim-Based Crime Data, 2012 - 12/1/2017</p>
         </div>
         <div class="width--normal text">
           <p>The areas targeted most in street robberies include both neighborhoods known to experience high crime as well as those that people view as safe from more serious crimes such as shootings or homicides.</p>
@@ -348,12 +355,14 @@
                 <td>14</td>
               </tr>
             </table>
+            <p class="source"><span>Source: </span>Baltimore Police Department Victim-Based Crime Data, 2012 - 12/1/2017</p>
           </div>
         </div>
         <div class="width--float media media--carjacking">
           <div class="wrapper">
             <h3>Baltimore carjackings, 2012-2017</h3>
             <canvas id="carjacking"></canvas>
+            <p class="source"><span>Source: </span>Baltimore Police Department Victim-Based Crime Data, 2012 - 12/1/2017</p>
           </div>
         </div>
         <div class="width--normal text">
@@ -445,6 +454,7 @@
                 <td>16</td>
               </tr>
             </table>
+            <p class="source"><span>Source: </span>Baltimore Police Department Victim-Based Crime Data, 2012 - 12/1/2017</p>
           </div>
         </div>
         <div class="width--normal text">
@@ -458,6 +468,7 @@
           <div class="wrapper">
             <h3>Commercial and residential robberies, 2012-2017</h3>
             <iframe width="100%" height="520" frameborder="0" src="https://baltsun.carto.com/builder/44076805-8dc3-4c0f-9019-9f1aebd56349/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+            <p class="source"><span>Source: </span>Baltimore Police Department Victim-Based Crime Data, 2012 - 12/1/2017</p>
           </div>
         </div>
       </section>
@@ -568,6 +579,7 @@
                 <td>2%</td>
               </tr>
             </table>
+            <p class="source"><span>Source: </span>Baltimore Police Department Victim-Based Crime Data, 2012 - 12/1/2017</p>
           </div>
         </div>
         <div class="width--normal text">
@@ -598,6 +610,7 @@
                 <td>245%</td>
               </tr>
             </table>
+            <p class="source"><span>Source: </span>Baltimore Police Department Victim-Based Crime Data, 2012 - 12/1/2017</p>
           </div>
         </div>
         <div class="width--normal text text--clear">
@@ -608,7 +621,7 @@
       <section>
         <div class="width--normal text">
           <h2>Rape</h2>
-          <p>The shift in the number of rape incidents appears to be scattered throughout neighborhoods. Some neighborhoods with the most incidents in the past, like downtown Baltimore, saw small decreases, but overall numbers are up about 7 percent.</p>
+          <p>The shift in the number of rape incidents appears to be scattered throughout neighborhoods. Some neighborhoods with the most incidents in the past, like downtown Baltimore, saw significant decreases, but overall numbers are up about 7 percent.</p>
           <p>Most incidents occur in areas where other violent crime is prevalent.</p>
         </div>
         <div class="width--float media">
@@ -671,12 +684,14 @@
                 <td>13</td>
               </tr>
             </table>
+            <p class="source"><span>Source: </span>Baltimore Police Department Victim-Based Crime Data, 2012 - 12/1/2017</p>
           </div>
         </div>
         <div class="width--normal media">
           <div class="wrapper">
             <h3>Baltimore rape incidents, 2012-2017</h3>
             <iframe width="100%" height="520" frameborder="0" src="https://baltsun.carto.com/builder/487c4b8e-2ea0-4068-970c-057e6c99872e/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+            <p class="source"><span>Source: </span>Baltimore Police Department Victim-Based Crime Data, 2012 - 12/1/2017</p>
           </div>
         </div>
       </section>
@@ -689,7 +704,16 @@
           <div class="wrapper">
             <h3>Weapons used in violent crimes, 2012-2017</h3>
             <canvas id="weapons"></canvas>
+            <p class="source"><span>Source: </span>Baltimore Police Department Victim-Based Crime Data, 2012 - 12/1/2017</p>
           </div>
+        </div>
+      </section>
+      <section>
+        <div class="width--normal text">
+          <h2>Further reading</h2>
+          <p><a href="http://www.baltimoresun.com/news/maryland/crime/bs-md-ci-per-capita-homicides-20171227-story.html" target="_blank">Baltimore has now had 343 homicides in 2017, sets record for killings per capita</a></p>
+          <p><a href="http://www.baltimoresun.com/news/maryland/crime/bs-md-timeline-of-violence-in-baltimore-20171116-htmlstory.html" target="_blank">Graphic: A timeline of violence in Baltimore</a></p>
+          <p><a href="http://data.baltimoresun.com/news/police/homicides/" target="_blank">Baltimore City Homicide Map</a></p>
         </div>
         <div id="leaderboard"><!-- Beginning Async AdSlot 1 for Ad unit trb.baltimoresun  ### size: [[728,90]] -->
       <!-- Adslot's refresh function: googletag.pubads().refresh([gptadslots[1]]) -->
@@ -703,8 +727,8 @@
       </section>
     </div>
     <!--Javascript-->
-    <script src="js/min/jquery-3.0.0.min.js"></script>
+    <script src="js/min/jquery-3.0.0.min.js?1"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/app.js?1"></script>
   </body>
 </html>
