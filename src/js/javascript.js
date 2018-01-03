@@ -28,6 +28,7 @@ var violentCrime = {
 		Chart.defaults.global.legend.labels.fontFamily = 'Inconsolata';
 		Chart.defaults.global.legend.labels.fontStyle = 'bold';
 		Chart.defaults.global.legend.labels.fontSize = 14;
+		Chart.defaults.global.legend.onClick = function(e) {e.stopPropagation()};
 
 		var overall = document.getElementById('overall').getContext('2d');
 		var overallData = [19017,18091,16460,17718,19462,20164];
@@ -64,7 +65,7 @@ var violentCrime = {
 						ticks: {
 							fontFamily: 'Inconsolata',
 							fontSize: 14,
-							min: 0
+							min: 15000
 						}
 					}],
 					xAxes: [{
