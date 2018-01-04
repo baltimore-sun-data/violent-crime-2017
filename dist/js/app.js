@@ -34,21 +34,21 @@ var violentCrime = {
             e.stopPropagation();
         };
         var overall = document.getElementById("overall").getContext("2d");
-        var overallData = [ 19017, 18091, 16460, 17718, 19462, 20164 ];
+        var overallData = [ 19017, 18090, 16460, 17719, 19464, 21667 ];
         var byType = document.getElementById("byType").getContext("2d");
-        var byTypeData = [ [ 13736, 25186, 662, 844, 12e3, 1140 ], [ 15224, 22408, 981, 901, 15875, 1955 ] ];
+        var byTypeData = [ [ 13736, 25186, 662, 844, 12e3, 1139 ], [ 15572, 22996, 1003, 916, 16358, 2005 ] ];
         var homicides = document.getElementById("homicides").getContext("2d");
-        var homicidesData = [ [ 216, 235, 211, 342, 318, 321 ], [ 369, 402, 369, 635, 667, 653 ] ];
+        var homicidesData = [ [ 216, 235, 211, 342, 318, 343 ], [ 369, 401, 369, 635, 666, 704 ] ];
         var timeAM = document.getElementById("timeAM").getContext("2d");
         var timeDataAM = [ [ 7.5, 7.4, 5.5, 2.9, 1.8, 1.3, .7, .6, .4, .8, 1.9, 2.5 ], [ 6, 5.6, 3.9, 2, 1.9, 1.2, 1.3, .6, 1.1, 1.5, 2.4, 1.9 ] ];
         var timePM = document.getElementById("timePM").getContext("2d");
         var timeDataPM = [ [ 2.4, 2.5, 4.3, 4.8, 4.3, 5, 4.6, 5.2, 6.4, 8.9, 8.2, 10.1 ], [ 3, 4.4, 4.1, 4.9, 4.4, 5.1, 6.4, 6.2, 7.4, 8.7, 9.3, 6.9 ] ];
         var robberyType = document.getElementById("robberyType").getContext("2d");
-        var robberyTypeData = [ [ 462, 1744, 1550, 8244 ], [ 1210, 2689, 1456, 10520 ] ];
+        var robberyTypeData = [ [ 462, 1744, 1550, 8244 ], [ 1247, 2773, 1487, 10851 ] ];
         var carjacking = document.getElementById("carjacking").getContext("2d");
-        var carjackingData = [ 182, 124, 156, 283, 413, 514 ];
+        var carjackingData = [ 182, 124, 156, 283, 413, 551 ];
         var weapons = document.getElementById("weapons").getContext("2d");
-        var weaponsData = [ [ 17.5, 50.6, 9.5, 13.1 ], [ 25.1, 42, 8.7, 14.7 ] ];
+        var weaponsData = [ [ 17.5, 50.6, 9.5, 13.1 ], [ 25.2, 42, 8.7, 14.7 ] ];
         var overallChart = new Chart(overall, {
             type: "line",
             data: {
