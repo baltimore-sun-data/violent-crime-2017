@@ -635,6 +635,7 @@ td:not(:first-child) {
       .media--homicideTable th:nth-child(4), .media--homicideTable td:nth-child(4) {
         display: table-cell; } }
   .media--time {
+    clear: both;
     background-color: #495871;
     color: white; }
     .media--time .wrapper {

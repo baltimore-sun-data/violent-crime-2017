@@ -231,6 +231,7 @@ section {
 		}
 	}
 	&--time {
+		clear: both;
 		background-color: $darkblue;
 		color: white;
 		.wrapper {

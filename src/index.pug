@@ -14,27 +14,27 @@ html(class="no-js", lang="en")
 		//Basic page needs
 		meta(charset="utf-8")
 		title Violent crime in Baltimore, 2012-2017
-		meta(name="description", content="Violent crime in Baltimore spiked after 2015. Three years since that pivotal year, overall violent crime continues to climb in the city.")
+		meta(name="description", content="Violent crime in Baltimore spiked after 2015. Three years since that pivotal year, overall violent crime continues to climb in the city. Explore the data here.")
 		meta(name="author", content="The Baltimore Sun")
 		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
 		//- Fonts and icons. Remove fontawesome if you are not using any custom icons.
 		link(rel="stylesheet", type="text/css", href="http://fonts.googleapis.com/css?family=Old+Standard+TT|Lato|Montserrat|Droid+Serif|Noto+Serif|Inconsolata")
 		link(rel="stylesheet" href=datalink + "css/font-awesome.min.css")
-		link(rel="stylesheet", type="text/css", href=datalink + "css/style.css?1")
+		link(rel="stylesheet", type="text/css", href=datalink + "css/style.css")
 
 		//Facebook Stuff
 		meta(property="og:title", content="Violent crime in Baltimore, 2012-2017")
 		meta(property="og:url", content="http://data.baltimoresun.com/news/violent-crime-2017/")
 		meta(property="og:image", content="http://data.baltimoresun.com/news/violent-crime-2017/images/thumb.jpg")
 		meta(property="og:site_name", content="The Baltimore Sun")
-		meta(property="og:description", content="Violent crime in Baltimore spiked after 2015. Three years since that pivotal year, overall violent crime continues to climb in the city.")
+		meta(property="og:description", content="Violent crime in Baltimore spiked after 2015. Three years since that pivotal year, overall violent crime continues to climb in the city. Explore the data here.")
 		meta(property="fb:app_id", content="310302989040998")
 		//Twitter Stuff
 		meta(name="twitter:card", content="summary")
 		meta(name="twitter:site", content="@baltimoresun")
 		meta(name="twitter:creator", content="@baltsundata")
 		meta(name="twitter:title", content="Violent crime in Baltimore, 2012-2017")
-		meta(name="twitter:description", content="Violent crime in Baltimore spiked after 2015. Three years since that pivotal year, overall violent crime continues to climb in the city.")
+		meta(name="twitter:description", content="Violent crime in Baltimore spiked after 2015. Three years since that pivotal year, overall violent crime continues to climb in the city. Explore the data here: ")
 		meta(name="twitter:image", content="http://data.baltimoresun.com/news/violent-crime-2017/images/thumb.jpg")
 		meta(name="twitter:domain", content="baltimoresun.com")
 
@@ -190,7 +190,6 @@ html(class="no-js", lang="en")
 					p The neighborhoods with the most shootings and homicides today are largely the same ones from 2012-2014, but many saw massive spikes in numbers.
 					p From 2012-2014, Sandtown-Winchester and Belair-Edison each had 47 shootings and homicides, the most of any other neighborhood.
 					p In the past three years, the neighborhoods with the most shootings and homicides outpaced these numbers. Twelve neighborhoods had more than 47 shootings and homicides from 2015 to 2017.
-
 				.width--wide.media--time
 					.wrapper.wrapper--stretch
 						P Shootings and killings are also occurring earlier in the day now. From 2012 and 2014, 48 percent of shootings and homicides took place between 9 p.m. and 3 a.m. That figure is down to 40 percent between 2015 and 2017. Shootings and homicides between 9 a.m. and 9 p.m. are up 7 percentage points.
@@ -621,12 +620,12 @@ html(class="no-js", lang="en")
 						a(href="http://www.baltimoresun.com/news/maryland/crime/bs-md-timeline-of-violence-in-baltimore-20171116-htmlstory.html" target="_blank") Graphic: A timeline of violence in Baltimore
 					p
 						a(href="http://data.baltimoresun.com/news/police/homicides/" target="_blank") Baltimore City Homicide Map
-			#leaderboard
-				include includes/ad-for-body.html
+				#leaderboard
+					include includes/ad-for-body.html
 
 		//Javascript
-		script(src=datalink + "js/min/jquery-3.0.0.min.js?1")
+		script(src=datalink + "js/min/jquery-3.0.0.min.js")
 		script(src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js")
-		script(src=datalink + "js/app.js?1")
+		script(src=datalink + "js/app.js")
 		//- script(src=datalink + "js/app.min.js")
 
