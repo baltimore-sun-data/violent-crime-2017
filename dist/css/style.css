@@ -461,7 +461,7 @@ th {
 .icon-facebook:before {
   content: "\e615"; }
 
-html, body {
+html, body, .container, section {
   overflow-x: hidden; }
 
 body {
@@ -678,15 +678,15 @@ td:not(:first-child) {
       max-width: 680px; } }
   .media--carjackingTable .wrapper:after {
     right: -250%; }
-  .media--carjackingTable th:nth-child(2), .media--carjackingTable td:nth-child(2) {
+  .media--carjackingTable th:nth-child(4), .media--carjackingTable td:nth-child(4) {
     display: none; }
     @media (min-width: 500px) {
-      .media--carjackingTable th:nth-child(2), .media--carjackingTable td:nth-child(2) {
+      .media--carjackingTable th:nth-child(4), .media--carjackingTable td:nth-child(4) {
         display: table-cell; } }
-  .media--aggAssaultsTable th:nth-child(2), .media--aggAssaultsTable td:nth-child(2) {
+  .media--aggAssaultsTable th:nth-child(4), .media--aggAssaultsTable td:nth-child(4) {
     display: none; }
     @media (min-width: 500px) {
-      .media--aggAssaultsTable th:nth-child(2), .media--aggAssaultsTable td:nth-child(2) {
+      .media--aggAssaultsTable th:nth-child(4), .media--aggAssaultsTable td:nth-child(4) {
         display: table-cell; } }
   @media (min-width: 720px) {
     .media--aggAssaultSpikesTable .wrapper {
@@ -698,6 +698,11 @@ td:not(:first-child) {
   @media (min-width: 720px) and (min-width: 1020px) {
     .media--aggAssaultSpikesTable .wrapper {
       max-width: 720px; } }
+  .media--rape th:nth-child(4), .media--rape td:nth-child(4) {
+    display: none; }
+    @media (min-width: 500px) {
+      .media--rape th:nth-child(4), .media--rape td:nth-child(4) {
+        display: table-cell; } }
 
 /* Leaderboard */
 #leaderboard {
